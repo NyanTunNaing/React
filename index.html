@@ -26,13 +26,26 @@
 
   <script type="text/babel">
     const Main = () => {
-      return <div>Hello world this is main text</div>;
+      let name = 'Nyan Tun Naing';
+      let number = 20;
+      let className = 'class-name';
+
+      let click = () => {
+        alert('Hello World');
+      }; // for using function in JSX, we can simply add function reference in curly braces we don't need to call the function.
+
+      return (
+        <div className={className}>
+          <h2>{name}</h2>
+          <p>{number}</p>
+          <p>{new Date().toDateString()}</p>
+          <button onClick={click}>Click me</button>
+        </div>
+      );
     };
 
     /*
     //About JSX - different attributes with HTML (class in HTML but className in JSX), JSX expressions must have one parent element.
-
-
     */
 
     const rootContainer = document.getElementById('main');
